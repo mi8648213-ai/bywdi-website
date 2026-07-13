@@ -137,3 +137,55 @@ link.classList.add("active");
 // ================================
 
 console.log("BYWDI Website Loaded Successfully");
+// ================================
+// OUR TEAM SEARCH
+// ================================
+
+const teamSearch = document.getElementById("teamSearch");
+
+if (teamSearch) {
+
+    teamSearch.addEventListener("keyup", function () {
+
+        const value = this.value.toLowerCase();
+
+        const cards = document.querySelectorAll(".team-card");
+
+        cards.forEach(card => {
+
+            const text = card.textContent.toLowerCase();
+
+            if (text.includes(value)) {
+
+                card.style.display = "";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+}
+
+
+// ================================
+// VIEW PROFILE BUTTON
+// ================================
+
+const profileButtons = document.querySelectorAll(".profile-btn");
+
+profileButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const staffName = this.parentElement.querySelector("h3").textContent;
+
+        alert("Full profile for " + staffName + " will be available soon.");
+
+    });
+
+});
