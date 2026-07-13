@@ -285,3 +285,63 @@ transform:translateY(0);
 nav ul li a.active{
 color:#FFD700;
 }
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+header{
+    padding:15px;
+}
+
+.logo{
+    flex-direction:column;
+    text-align:center;
+}
+
+.logo img{
+    width:80px;
+    height:auto;
+    margin-bottom:10px;
+}
+
+nav ul{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    padding:0;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav ul li a{
+    font-size:16px;
+}
+
+section{
+    padding:20px 15px;
+}
+
+h1{
+    font-size:30px;
+}
+
+h2{
+    font-size:28px;
+}
+
+p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+.contact p{
+    word-break:break-word;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+
