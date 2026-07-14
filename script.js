@@ -173,19 +173,89 @@ if (teamSearch) {
 
 
 // ================================
-// VIEW PROFILE BUTTON
+// TEAM PROFILE BUTTON
 // ================================
 
-const profileButtons = document.querySelectorAll(".profile-btn");
+const profileBtns = document.querySelectorAll(".profile-btn");
 
-profileButtons.forEach(button => {
+profileBtns.forEach(btn => {
 
-    button.addEventListener("click", function () {
+    btn.addEventListener("click", function () {
 
-        const staffName = this.parentElement.querySelector("h3").textContent;
+        const name = this.parentElement.querySelector("h3").innerText;
 
-        alert("Full profile for " + staffName + " will be available soon.");
+        alert("Profile page for " + name + " will be available soon.");
 
     });
+
+});
+
+
+// ================================
+// GALLERY IMAGE CLICK
+// ================================
+
+const galleryImages = document.querySelectorAll(".gallery-container img");
+
+galleryImages.forEach(image => {
+
+    image.addEventListener("click", function () {
+
+        window.open(this.src, "_blank");
+
+    });
+
+});
+
+
+// ================================
+// DONATE BUTTON
+// ================================
+
+const donateBtn = document.querySelector(".donate .btn");
+
+if (donateBtn) {
+
+    donateBtn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        alert("Online donation system will be activated soon.");
+
+    });
+
+}
+
+
+// ================================
+// VOLUNTEER FORM
+// ================================
+
+const volunteerForm = document.querySelector(".volunteer form");
+
+if (volunteerForm) {
+
+    volunteerForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        alert("Thank you for applying to volunteer with BYWDI. We will contact you soon.");
+
+        this.reset();
+
+    });
+
+}
+
+
+// ================================
+// STATISTICS COUNTER
+// ================================
+
+const statNumbers = document.querySelectorAll(".stat-box h3");
+
+statNumbers.forEach(stat => {
+
+    stat.style.transition = "0.5s";
 
 });
